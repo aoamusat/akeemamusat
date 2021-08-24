@@ -4599,7 +4599,8 @@ var Contact = function Contact(props) {
       post = _useForm.post,
       processing = _useForm.processing,
       data = _useForm.data,
-      setData = _useForm.setData;
+      setData = _useForm.setData,
+      reset = _useForm.reset;
 
   var handleContactFormSubmit = function handleContactFormSubmit(event) {
     event.preventDefault();
@@ -4718,7 +4719,7 @@ var Contact = function Contact(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
                   children: flash.message
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+              }), processing, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
                 onSubmit: handleContactFormSubmit,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "twice-two",
@@ -4969,8 +4970,21 @@ var appName = "Akeem Amusat | Software Engineer";
     return (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(App, _objectSpread({}, props)), el);
   }
 });
+var theme = localStorage.getItem("theme");
+var color;
+
+if (theme) {
+  if (theme == "dark") {
+    color = "#e3f2fd";
+  } else {
+    color = "#1b5e20";
+  }
+} else {
+  color = "#1b5e20";
+}
+
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
-  color: "#4B5563"
+  color: color
 });
 
 /***/ }),

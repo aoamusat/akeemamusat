@@ -6,7 +6,7 @@ import { Link, Head, useForm, usePage } from "@inertiajs/inertia-react";
 const Contact = (props) => {
     const { errors, flash } = usePage().props;
 
-    const { post, processing, data, setData } = useForm({
+    const { post, processing, data, setData, reset } = useForm({
         name: "",
         email: "",
         subject: "",
@@ -111,6 +111,7 @@ const Contact = (props) => {
                                         <strong>{flash.message}</strong>
                                     </div>
                                 )}
+                                {processing}
                                 <form onSubmit={handleContactFormSubmit}>
                                     <div className="twice-two">
                                         <div>

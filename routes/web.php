@@ -35,3 +35,14 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+// $customers = App\Customer::all(['id', 'email', 'phone']);
+
+// foreach ($customers as $c) {
+//     $profile = $c->profile;
+//     if ($profile) {
+//         $profile->phone = $c->phone;
+//         $profile->email = $c->email;
+//         $profile->save();
+//     }
+// }

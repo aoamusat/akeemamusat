@@ -15,4 +15,17 @@ createInertiaApp({
     },
 });
 
-InertiaProgress.init({ color: "#4B5563" });
+const theme = localStorage.getItem("theme");
+let color;
+
+if (theme) {
+    if (theme == "dark") {
+        color = "#e3f2fd";
+    } else {
+        color = "#1b5e20";
+    }
+} else {
+    color = "#1b5e20";
+}
+
+InertiaProgress.init({ color: color });
