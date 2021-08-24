@@ -1,4 +1,5 @@
 jQuery.noConflict();
+
 jQuery(document).ready(function ($) {
     function lightboxPhoto() {
         jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({
@@ -28,7 +29,7 @@ jQuery(document).ready(function ($) {
                 var $filteredData = $data.find(".portfolio-item2");
             } else {
                 var $filteredData = $data.find(
-                    ".portfolio-item2[data-type=" + filterClass + "]",
+                    ".portfolio-item2[data-type=" + filterClass + "]"
                 );
             }
             $(".portfolio-area").quicksand(
@@ -39,7 +40,7 @@ jQuery(document).ready(function ($) {
                 },
                 function () {
                     lightboxPhoto();
-                },
+                }
             );
             $(this).addClass("active");
             return false;
