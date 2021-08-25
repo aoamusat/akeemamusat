@@ -75,12 +75,10 @@ const Hero = (props) => {
                             <span className="cursor typing">&nbsp;</span>
                         </h1>
                         <p className="text-justify">
-                            I'm a diverse &amp; multifaceted asset ready to be
-                            part of your team. I have a strong PHP, JavaScript
-                            and python skill set with a focus on the backend
-                            development using python, WAMP and MERN stacks. I
-                            can quickly learn new ideas and trends in
-                            technology.
+                            Hi, my name is Akeem Amusat. I'm a Software
+                            Engineer, located in Lagos, Nigeria. I enjoy
+                            creating high quality and delightful websites and
+                            web applications.
                         </p>
                         <div className="mt-sm-5 mt-4">
                             <Link
@@ -100,9 +98,9 @@ const Hero = (props) => {
                     <div className="col-lg-6 col-md-8 col-sm-10 mt-lg-0 mt-4">
                         <div className="img-effect text-lg-center">
                             <img
-                                src="/img/akeem.jpg"
+                                src="/img/akeem.png"
                                 alt="Akeem"
-                                className="img-fluid"
+                                className="img-fluid radius-image"
                             />
                         </div>
                     </div>

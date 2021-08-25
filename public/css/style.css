@@ -19,7 +19,7 @@
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #8e43e7;
+    --primary: #16b681;
     --secondary: #273c66;
     --success: #28a745;
     --info: #17a2b8;
@@ -174,12 +174,12 @@ sup {
 }
 
 a {
-    color: #8e43e7;
+    color: #23a8f5;
     text-decoration: none;
     background-color: transparent;
 }
 a:hover {
-    color: #6719c4;
+    color: #23a8f5;
     text-decoration: underline;
 }
 
@@ -2522,13 +2522,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #091b3d;
-    border-color: #0a1b3a;
+    background-color: #16b681;
+    border-color: #14b680;
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #091b3d;
-    border-color: #0a1b3a;
+    background-color: #16b681;
+    border-color: #16b681;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -2809,13 +2809,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #8e43e7;
-    border-color: #8e43e7;
+    color: #16b681;
+    border-color: #16b681;
 }
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #8e43e7;
-    border-color: #8e43e7;
+    background-color: #16b681;
+    border-color: #16b681;
 }
 .btn-outline-primary:focus,
 .btn-outline-primary.focus {
@@ -12842,7 +12842,7 @@ a.text-dark:focus {
 }
 
 :root {
-    --primary-color: #8e43e7;
+    --primary-color: #16b681;
     --secondary-color: #273c66;
     --font-color: #696969;
     --bg-color: #fff;
@@ -12858,7 +12858,7 @@ a.text-dark:focus {
 }
 
 [data-theme="dark"] {
-    --primary-color: #8e43e7;
+    --primary-color: #16b681;
     --secondary-color: #273c66;
     --font-color: #afafaf;
     --bg-color: #0b0d0e;

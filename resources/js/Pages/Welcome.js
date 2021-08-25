@@ -3,6 +3,7 @@ import { Head } from "@inertiajs/inertia-react";
 import Navbar from "@/Components/Navbar";
 import { Footer } from "@/Components/Footer";
 import Hero from "@/Components/Hero";
+import { AboutHero } from "@/Components/AboutHero";
 
 export default function Welcome(props) {
     return (
@@ -16,6 +17,7 @@ export default function Welcome(props) {
                     "AI/ML Enthusiast",
                 ]}
             />
+            <AboutHero />
             <Footer />
         </>
     );
