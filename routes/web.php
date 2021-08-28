@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,8 +18,6 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
@@ -35,14 +32,3 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
-
-// $customers = App\Customer::all(['id', 'email', 'phone']);
-
-// foreach ($customers as $c) {
-//     $profile = $c->profile;
-//     if ($profile) {
-//         $profile->phone = $c->phone;
-//         $profile->email = $c->email;
-//         $profile->save();
-//     }
-// }

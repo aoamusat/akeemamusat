@@ -16,13 +16,13 @@ export const AboutHero = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-lg-8 mt-lg-0 mt-5">
+                        <div className="col-lg-8 mt-lg-0 mt-5 text-center">
                             <h5 className="title-small mb-2">Who am I?</h5>
                             <h3 className="title-big">
                                 I'm Akeem Amusat, a Software Engineer &amp; Web
                                 Developer
                             </h3>
-                            <p className="mt-4 text-justify">
+                            <p className="mt-4 text-center">
                                 I'm a diverse &amp; multifaceted asset ready to
                                 be part of your team. I have a strong PHP,
                                 JavaScript and python skill set with a focus on
