@@ -39,8 +39,8 @@ const Navbar = () => {
                         className="navbar-toggler collapsed bg-gradient"
                         type="button"
                         data-toggle="collapse"
-                        data-target="#navbarTogglerDemo02"
-                        aria-controls="navbarTogglerDemo02"
+                        data-target="#navbarToggler"
+                        aria-controls="navbarToggler"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
@@ -50,18 +50,13 @@ const Navbar = () => {
 
                     <div
                         className="collapse navbar-collapse"
-                        id="navbarTogglerDemo02"
+                        id="navbarToggler"
                     >
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item active">
                                 <Link className="nav-link" href="/">
                                     Home
                                     <span className="sr-only">(current)</span>
-                                </Link>
-                            </li>
-                            <li className="nav-item @@about__active">
-                                <Link className="nav-link" href="/about">
-                                    About
                                 </Link>
                             </li>
                             <li className="nav-item @@portfolio__active">

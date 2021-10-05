@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Hero = (props) => {
     const typingDelay = 200;
@@ -11,7 +11,7 @@ const Hero = (props) => {
     const [erase, setErase] = useState();
     const [textArray, setTextArray] = useState([
         "Software Engineer",
-        "Web developer",
+        "Web Developer",
         "AI/ML Enthusiast",
     ]);
 
