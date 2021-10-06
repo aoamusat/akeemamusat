@@ -13,7 +13,6 @@ export default function Welcome(props) {
             <Head title="Akeem Amusat | Software Engineer" />
             <Navbar />
             <Hero />
-            <AboutHero />
             <ResumeComponent />
             <Testimonials />
             <Footer />

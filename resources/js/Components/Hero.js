@@ -10,10 +10,19 @@ const Hero = (props) => {
                     <div className="col-lg-6 col-sm-12 mt-lg-0 mt-4 text-center">
                         <span className="title-small">Hello</span>
                         <h1 className="mb-2 title">
-                            <span>I'm</span> Akeem Amusat
+                            <span>My name is</span> Akeem
                         </h1>
                         <h3 className="mb-4 title">
-                            <Typist>Software Engineer</Typist>
+                            <Typist
+                                cursor={{ hideWhenDone: true }}
+                                avgTypingDelay={100}
+                            >
+                                Software Engineer
+                                <Typist.Delay ms={400} />
+                                <Typist.Backspace count={17}></Typist.Backspace>
+                                <Typist.Delay ms={1000}></Typist.Delay>
+                                Backend Developer
+                            </Typist>
                         </h3>
                         <p className="">
                             Hi, my name is Akeem Amusat. I'm a Software
