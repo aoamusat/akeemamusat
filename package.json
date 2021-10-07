@@ -27,6 +27,8 @@
         "tailwindcss": "^2.1.2"
     },
     "dependencies": {
+        "react-content-loader": "^6.0.3",
+        "react-loading-skeleton": "^2.2.0",
         "react-typist": "^2.0.5"
     }
 }

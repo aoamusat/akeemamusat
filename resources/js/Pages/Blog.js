@@ -2,32 +2,28 @@ import React, { useEffect, useState } from "react";
 import { Head, Link } from "@inertiajs/inertia-react";
 import Navbar from "@/Components/Navbar";
 import axios from "axios";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { Footer } from "@/Components/Footer";
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
 
-    const fetchBlogPosts = () => {
+    const fetchBlogPosts = async () => {
         const config = {
-            method: "get",
-            url: "/api/posts",
             headers: {
                 "Access-Control-Allow-Origin": "*",
-                "api-key": "eu5yT5cYajfrGjj9WKR492eK",
                 "Content-Type": "application/json",
             },
         };
-        axios(config)
-            .then(function (response) {
-                setPosts(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+
+        const response = await axios.get("/api/posts", config);
+
+        setPosts(response.data);
     };
 
     useEffect(() => {
         fetchBlogPosts();
-    }, []);
+    }, [posts, setPosts]);
 
     return (
         <React.Fragment>
@@ -58,14 +54,21 @@ const Blog = () => {
                         <div className="row">
                             <div className="col-lg-8 text11-content">
                                 {posts.length <= 0 ? (
-                                    <h3 className="text-center">Loading...</h3>
+                                    <SkeletonTheme
+                                        color="#e3e3e3"
+                                        highlightColor="#d0d0d0"
+                                    >
+                                        <p>
+                                            <Skeleton count={3} height={100} />
+                                        </p>
+                                    </SkeletonTheme>
                                 ) : (
-                                    posts.map((post, index) => {
+                                    posts.map((post) => {
                                         return (
-                                            <div className="item">
+                                            <div className="item" key={post.id}>
                                                 <div className="card">
                                                     <div className="card-header p-0 position-relative border-0">
-                                                        <a
+                                                        <Link
                                                             href={
                                                                 "/blog/" +
                                                                 post.slug +
@@ -80,22 +83,23 @@ const Blog = () => {
                                                                 }
                                                                 alt={post.title}
                                                             />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="card-body p-0 blog-details">
                                                         <h6 className="mt-4">
-                                                            {
+                                                            {new Date(
                                                                 post.published_timestamp
-                                                            }
+                                                            ).toDateString()}
                                                         </h6>
                                                         <a
                                                             href="#"
                                                             className="admin"
                                                         >
-                                                            - by Akeem Amusat
+                                                            &nbsp;-&nbsp;by
+                                                            Akeem Amusat
                                                         </a>
                                                         <br />
-                                                        <a
+                                                        <Link
                                                             href={
                                                                 "/blog/" +
                                                                 post.slug +
@@ -105,11 +109,11 @@ const Blog = () => {
                                                             className="blog-desc"
                                                         >
                                                             {post.title}
-                                                        </a>
+                                                        </Link>
                                                         <p>
                                                             {post.description}
                                                         </p>
-                                                        <a
+                                                        <Link
                                                             href={
                                                                 "/blog/" +
                                                                 post.slug +
@@ -119,7 +123,7 @@ const Blog = () => {
                                                             className="read"
                                                         >
                                                             Read more
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,6 +131,7 @@ const Blog = () => {
                                     })
                                 )}
                             </div>
+                            {/* Sidebar */}
                             <div className="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
                                 <aside className="sidebar">
                                     <div className="sidebar-widget popular-posts">
@@ -192,6 +197,7 @@ const Blog = () => {
                                                 <div className="sidebar-title">
                                                     <h4>Twitter</h4>
                                                 </div>
+                                                {/* Twitter Section */}
                                                 <ul className="blog-cat twitter-feed">
                                                     <li>
                                                         <a href="#url">
@@ -237,6 +243,7 @@ const Blog = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </React.Fragment>
     );
 };
