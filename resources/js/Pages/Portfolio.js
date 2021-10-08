@@ -26,6 +26,22 @@ const Portfolio = () => {
                     </div>
                 </div>
             </section>
+            <section className="text-11 py-5">
+                <div className="text11 py-lg-5 py-md-4">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-8 item">
+                                <div className="card">
+                                    Loremdalksdlaskjdhkajsdkj
+                                    abjhdkjahsbdjahSBDADBHSAKJDA
+                                    ASDJAkjhdahdkaHSDKA
+                                    askdbkjaHBDKJAhjasjdakjdhabhdakshd
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </React.Fragment>
     );
 };

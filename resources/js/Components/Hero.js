@@ -7,7 +7,7 @@ const Hero = (props) => {
         <section id="home" className="w3l-banner py-5">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6 col-sm-12 mt-lg-0 mt-4 text-center">
+                    <div className="col-lg-6 col-sm-12 mt-lg-0 mt-4">
                         <span className="title-small">Hello</span>
                         <h1 className="mb-2 title">
                             <span>My name is</span> Akeem
@@ -24,7 +24,7 @@ const Hero = (props) => {
                                 Backend Developer
                             </Typist>
                         </h3>
-                        <p className="">
+                        <p className="text-justify">
                             Hi, my name is Akeem Amusat. I'm a Software
                             Engineer, located in Lagos, Nigeria. I enjoy
                             creating high quality and delightful websites and
